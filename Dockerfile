@@ -1,5 +1,5 @@
 FROM registry.gitlab.com/rust_musl_docker/image:stable-latest 
-RUN apt-get update && apt-get install -y build-essentials libtool autoconf unzip wget
+RUN apt-get update && apt-get install -y build-essential libtool autoconf unzip wget
 RUN apt purge --auto-remove cmake
 
 COPY entrypoint.sh /entrypoint.sh
