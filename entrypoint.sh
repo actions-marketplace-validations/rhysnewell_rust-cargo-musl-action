@@ -2,6 +2,8 @@
 
 set -e
 
+cmake --version
+
 if [ "$1" == "build" ]; then
   args="--target x86_64-unknown-linux-musl --release $2"
 else
