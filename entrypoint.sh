@@ -11,7 +11,7 @@ else
 fi
 # split flags string into args
 read -r -a args_array <<< "$args"
-cross "$1" "${args_array[@]}"
+cargo "$1" "${args_array[@]}"
 
 if [ "$1" == "build" ]; then
   release_dir="target/x86_64-unknown-linux-musl/release/"
