@@ -18,7 +18,7 @@ ENV LLVM_CONFIG_PATH /usr/bin
 
 # Install basics to locally compile htslib dependencies
 RUN apt-get update && \
-            apt-get install -y build-essential autoconf automake autotools-dev git wget
+            apt-get install -y build-essential autoconf automake autotools-dev git wget libssl-dev libcurl4-openssl-dev zlib1g-dev libbz2-dev liblzma-dev musl musl-dev musl-tools linux-libc-dev linux-headers-4.15.0-20-generic cmake
 
 # Otherwise LLVM bump below fails
 RUN apt-get install -y wget gnupg lsb-release software-properties-common apt-transport-https ca-certificates
