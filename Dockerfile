@@ -8,6 +8,9 @@ RUN pip3 install --upgrade cmake
 # RUN apt update
 # RUN apt install -y cmake
 
+# Static linking for C++ code
+RUN ln -s "/usr/bin/g++" "/usr/bin/musl-g++"
+
 ENV RUSTUP_HOME=/rust
 ENV CARGO_HOME=/cargo
 ENV PATH=/cargo/bin:/rust/bin:$PATH
