@@ -3,7 +3,7 @@ RUN apt purge -y --auto-remove cmake
 RUN apt-get update && apt-get install -y build-essential libtool autoconf unzip wget software-properties-common software-properties-common lsb-release gcc-multilib pkg-config libssl-dev
 RUN apt-get clean all
 RUN add-apt-repository -y ppa:deadsnakes/ppa
-RUN apt-get update && apt-get install python3.9
+RUN apt-get update && apt-get install -y python3
 RUN pip3 install --upgrade cmake
 # RUN wget -O - https://apt.kitware.com/keys/kitware-archive-latest.asc 2>/dev/null | gpg --dearmor - | tee /etc/apt/trusted.gpg.d/kitware.gpg >/dev/null
 # RUN apt-add-repository "deb https://apt.kitware.com/ubuntu/ $(lsb_release -cs) main"
